@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class MyRegister extends StatefulWidget {
@@ -10,6 +11,7 @@ class MyRegister extends StatefulWidget {
 class _MyRegisterState extends State<MyRegister> {
   @override
   Widget build(BuildContext context) {
+    String email='', password='',name='';
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -33,6 +35,9 @@ class _MyRegisterState extends State<MyRegister> {
                 child: Column(
                   children: [
                     TextField(
+                      onChanged: (value){
+                        email=value;
+                      },
                       decoration: InputDecoration(
                           fillColor: Colors.grey[100],
                           filled: true,
@@ -44,6 +49,9 @@ class _MyRegisterState extends State<MyRegister> {
                     ),
                     SizedBox(height: 20.0,),
                     TextField(
+                      onChanged: (value){
+                        name=value;
+                      },
                       decoration: InputDecoration(
                           fillColor: Colors.grey[100],
                           filled: true,
@@ -55,6 +63,9 @@ class _MyRegisterState extends State<MyRegister> {
                     ),
                     SizedBox(height: 20.0),
                     TextField(
+                      onChanged: (value){
+                        password=value;
+                      },
                       obscureText: true,
                       decoration: InputDecoration(
                           fillColor: Colors.grey[100],
@@ -78,7 +89,23 @@ class _MyRegisterState extends State<MyRegister> {
                           backgroundColor: Color(0xff4c505b),
                           child: IconButton(
                             color: Colors.white,
-                            onPressed: () {},
+                            onPressed: () async{
+                              try {
+                                UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                                    email: email,
+                                    password: password,
+                                );
+                                Navigator.pushNamed(context, 'home');
+                              } on FirebaseAuthException catch (e) {
+                                if (e.code == 'weak-password') {
+                                  print('The password provided is too weak.');
+                                } else if (e.code == 'email-already-in-use') {
+                                  print('The account already exists for that email.');
+                                }
+                              } catch (e) {
+                                print(e);
+                              }
+                            },
                             icon: Icon(Icons.arrow_forward ),
                           ),
                         )
