@@ -23,7 +23,7 @@ class _MyLoginState extends State<MyLogin> {
           children: [
             Container(
               padding: EdgeInsets.only(left: 35.0 , top: 170),
-              child: Text('Welcome \n Back',style: TextStyle(
+              child: Text('VET CARE',style: TextStyle(
                 color:  Colors.white,
                 fontSize: 33.0,
               ),),
@@ -109,7 +109,9 @@ class _MyLoginState extends State<MyLogin> {
                           color: Color(0xff4c505b),
                           fontWeight: FontWeight.w300,
                         ),)),
-                        TextButton(onPressed : () {}, child: Text('Forget password?',style: TextStyle(
+                        TextButton(onPressed : () {
+                          Navigator.pushNamed(context, 'home');
+                        }, child: Text('Dashboard',style: TextStyle(
                           decoration: TextDecoration.underline,
                           fontSize: 22.0,
                           color: Color(0xff4c505b),
