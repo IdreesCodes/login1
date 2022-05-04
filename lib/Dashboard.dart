@@ -35,21 +35,35 @@ class Dashboard extends StatelessWidget {
               )
               ,
             ),
+            SizedBox(
+              height: 40.0,
+            ),
             Padding(padding: EdgeInsets.all(19.0),
+
             child: Center(
               child: Wrap(
+                spacing: 40.0,
+                runSpacing: 70.0,
                 children: [
                   SizedBox(
 
-                    width: 115,
-                      height: 115,
+
+                    width: 120,
+                      height: 120,
                     child: Card(
                       color: Colors.white,
                       child: Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            Image.asset('assets/link1.png',width: 64.0,),
+                            IconButton(
+                           icon: Image.asset('assets/link1.png',width: 64.0,),
+                            iconSize: 50,
+                              onPressed: () {
+                                Navigator.pushNamed(context, 'link');
+                              },
+                            ),
+
                             SizedBox(
                               height: 10.0,
                             ),
@@ -63,15 +77,19 @@ class Dashboard extends StatelessWidget {
 
                               ),
                             )
+
                           ],
+
                         ),
                         ),
+
                       ) ,
+
                     ),
                   SizedBox(
 
-                    width: 115,
-                    height: 115,
+                    width: 120,
+                    height: 120,
                     child: Card(
                       color: Colors.white,
                       child: Padding(
@@ -83,7 +101,7 @@ class Dashboard extends StatelessWidget {
                               height: 10.0,
                             ),
                             Text(
-                              "Play from link",
+                              "From storage",
                               style: TextStyle(
 
                                   color: Colors.black,
@@ -97,6 +115,65 @@ class Dashboard extends StatelessWidget {
                       ),
                     ) ,
                   ),
+                  SizedBox(
+
+                    width: 120,
+                    height: 120,
+                    child: Card(
+                      color: Colors.white,
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Image.asset('assets/micro.jpg',width: 64.0,),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              "Record",
+                              style: TextStyle(
+
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 18.0
+
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ) ,
+                  ),
+                  SizedBox(
+
+                    width: 120,
+                    height: 120,
+                    child: Card(
+                      color: Colors.white,
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Image.asset('assets/weather.png',width: 64.0,),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              "Weather",
+                              style: TextStyle(
+
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 18.0
+
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ) ,
+                  ),
+
 
                 ],
               ),
