@@ -15,7 +15,7 @@ Future<void> main() async {
       'login' : (context) => MyLogin(),
       'register': (context) => MyRegister(),
       'home': (context) => Dashboard(),
-      'link': (context) => test123(),
+      'link': (context) => fromLink(),
 
     },
 

@@ -7,6 +7,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
@@ -96,7 +97,14 @@ class Dashboard extends StatelessWidget {
                         padding: EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            Image.asset('assets/file storage.png',width: 64.0,),
+                            IconButton(
+                              icon:  Image.asset('assets/file storage.png',width: 64.0,),
+                              iconSize: 50,
+                              onPressed: () {
+                                Navigator.pushNamed(context, 'link');
+                              },
+                            ),
+
                             SizedBox(
                               height: 10.0,
                             ),
@@ -125,7 +133,14 @@ class Dashboard extends StatelessWidget {
                         padding: EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            Image.asset('assets/micro.jpg',width: 64.0,),
+                            IconButton(
+                              icon: Image.asset('assets/micro.jpg',width: 64.0,),
+                              iconSize: 50,
+                              onPressed: () {
+                                Navigator.pushNamed(context, 'link');
+                              },
+                            ),
+
                             SizedBox(
                               height: 10.0,
                             ),
@@ -154,7 +169,15 @@ class Dashboard extends StatelessWidget {
                         padding: EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            Image.asset('assets/weather.png',width: 64.0,),
+                            IconButton(
+                              icon: Image.asset('assets/weather.png',width: 64.0,),
+                              iconSize: 50,
+                              onPressed: () {
+                                Navigator.pushNamed(context, 'link');
+                              },
+                            ),
+
+
                             SizedBox(
                               height: 10.0,
                             ),
