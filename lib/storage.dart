@@ -57,23 +57,23 @@ class _MainPageState extends State<MainPage> {
     //audioPlayer.setReleaseMode(ReleaseMode.LOOP);
     /// 1. Load audio from URL
    // String url =
-        'https://www.hochmuth.com/mp3/Beethoven_12_Variation.mp3';
-  //  audioPlayer.setUrl(url);
+   //     'https://www.hochmuth.com/mp3/Beethoven_12_Variation.mp3';
+    //audioPlayer.setUrl(url);
     /// 2. Load audio from File
-
+    /*
     final result = await FilePicker.platform.pickFiles();
     if (result != null) {
       final file = File(result.files.single.path!);
       audioPlayer.setUrl(file.path, isLocal: true);
     }
-
+    */
     /// 3. Load audio from Assets (assets/audio.mp3)
     /// See docs: https://github.com/bluefireteam/audioplayers/blob/main/packages/audioplayers/doc/audio_cache.md
-    /*
+
     final player = AudioCache(prefix: 'assets/');
-    final url = await player.load('audio.mp3');
+    final url = await player.load('Alone(PaglaSongs).mp3');
     audioPlayer.setUrl(url.path, isLocal: true);
-    */
+
   }
   @override
   void dispose() {
