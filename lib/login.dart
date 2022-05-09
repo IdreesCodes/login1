@@ -23,9 +23,10 @@ class _MyLoginState extends State<MyLogin> {
           children: [
             Container(
               padding: EdgeInsets.only(left: 35.0 , top: 170),
-              child: Text('VET CARE',style: TextStyle(
+              child: Text('Welcome \nback',style: TextStyle(
                 color:  Colors.white,
                 fontSize: 33.0,
+                letterSpacing: 4.0,
               ),),
 
             ),
