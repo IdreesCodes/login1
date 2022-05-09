@@ -71,7 +71,7 @@ class _MainPageState extends State<MainPage> {
     /// See docs: https://github.com/bluefireteam/audioplayers/blob/main/packages/audioplayers/doc/audio_cache.md
 
     final player = AudioCache(prefix: 'assets/');
-    final url = await player.load('Alone(PaglaSongs).mp3');
+    final url = await player.load('siaa.mp3');
     audioPlayer.setUrl(url.path, isLocal: true);
 
   }
