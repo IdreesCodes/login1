@@ -1,12 +1,12 @@
 import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+class Storage extends StatelessWidget {
+  const Storage({Key? key}) : super(key: key);
 
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) => MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -56,17 +56,17 @@ class _MainPageState extends State<MainPage> {
     // Repeat song when completed
     //audioPlayer.setReleaseMode(ReleaseMode.LOOP);
     /// 1. Load audio from URL
-    String url =
+   // String url =
         'https://www.hochmuth.com/mp3/Beethoven_12_Variation.mp3';
-    audioPlayer.setUrl(url);
+  //  audioPlayer.setUrl(url);
     /// 2. Load audio from File
-    /*
+
     final result = await FilePicker.platform.pickFiles();
     if (result != null) {
       final file = File(result.files.single.path!);
       audioPlayer.setUrl(file.path, isLocal: true);
     }
-    */
+
     /// 3. Load audio from Assets (assets/audio.mp3)
     /// See docs: https://github.com/bluefireteam/audioplayers/blob/main/packages/audioplayers/doc/audio_cache.md
     /*

@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:login/Dashboard.dart';
@@ -6,6 +8,7 @@ import 'package:login/Register.dart';
 import 'package:login/link.dart';
 import 'package:login/login.dart';
 import 'package:login/splash.dart';
+import 'package:login/storage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +22,7 @@ Future<void> main() async {
       'home': (context) => Dashboard(),
       'splash': (context) => SplashScreen(),
       'link' : (context) => MyApp(),
+      'storage': (context) => Storage(),
     },
 
 
