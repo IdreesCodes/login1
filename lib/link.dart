@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 
 
@@ -56,7 +57,7 @@ class _MainPageState extends State<MainPage> {
     //audioPlayer.setReleaseMode(ReleaseMode.LOOP);
     /// 1. Load audio from URL
     String url =
-        'https://media.chosic.com/wp-content/uploads/2022/03/Luke-Bergs-Summertimemp3.mp3';
+        'https://www.hochmuth.com/mp3/Beethoven_12_Variation.mp3';
     audioPlayer.setUrl(url);
     /// 2. Load audio from File
     /*
@@ -88,8 +89,9 @@ class _MainPageState extends State<MainPage> {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: Image.network(
-              'https://images.unsplash.com/photo-1541182388496-ac92a3230e4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d29tYW58fHx8fHwxNjQ5NDkzNzMw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080',
+
+            child: Image.asset (
+              'assets/logo.png',
               width: double.infinity,
               height: 350,
               fit: BoxFit.cover,
