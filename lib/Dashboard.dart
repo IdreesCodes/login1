@@ -43,7 +43,7 @@ class Dashboard extends StatelessWidget {
 
             child: Center(
               child: Wrap(
-                spacing: 40.0,
+                spacing: 140.0,
                 runSpacing: 70.0,
                 children: [
                   SizedBox(
@@ -123,7 +123,7 @@ class Dashboard extends StatelessWidget {
                       ),
                     ) ,
                   ),
-                  SizedBox(
+                /*  SizedBox(
 
                     width: 120,
                     height: 120,
@@ -159,6 +159,10 @@ class Dashboard extends StatelessWidget {
                       ),
                     ) ,
                   ),
+
+
+
+
                   SizedBox(
 
                     width: 120,
@@ -196,6 +200,8 @@ class Dashboard extends StatelessWidget {
                       ),
                     ) ,
                   ),
+
+                  */
 
 
                 ],

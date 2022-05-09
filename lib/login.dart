@@ -112,7 +112,7 @@ class _MyLoginState extends State<MyLogin> {
                         ),)),
                         TextButton(onPressed : () {
                           Navigator.pushNamed(context, 'home');
-                        }, child: Text('Dashboard',style: TextStyle(
+                        }, child: Text('Login',style: TextStyle(
                           decoration: TextDecoration.underline,
                           fontSize: 22.0,
                           color: Color(0xff4c505b),
